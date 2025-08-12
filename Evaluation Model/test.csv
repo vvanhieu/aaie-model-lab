@@ -1,0 +1,6 @@
+prompts,labels,predictions
+"The quick brown fox jumps over the lazy dog.",Human,Human
+"Neural networks can approximate any function.",AI,AI
+"I had coffee this morning and read the news.",Human,AI
+"ChatGPT is a large language model created by OpenAI.",AI,AI
+"My favorite color is blue.",Human,Human
