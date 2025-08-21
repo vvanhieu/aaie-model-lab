@@ -12,9 +12,9 @@ Implementing:
 
 - Primary Hypothesis: if the prompts are structured with explicit evaluation criteria, output formats, and reasoning requirements, then the generative AI will produce ratings that are meaningful and consistent
 o	Meaningfulness (Validity): using metrics as Pearson/Spearman correlation, and Cohen's kappa agreement.
-	Threshold: Correlation >= 0.7 with human annotations.
+o	Threshold: Correlation >= 0.7 with human annotations.
 o	Consistency (Reliability): run identical or paraphrased model outputs multiple times. 
-	Ratings should remain stable (variance <= 0.5 on a 1-5 scale).
+o	Ratings should remain stable (variance <= 0.5 on a 1-5 scale).
 
 2.	AI Rating Prompts for Feedback Generation Task (Rating + Reasoning):
 
@@ -24,10 +24,10 @@ a)	Evaluation Criteria: rate a student-feedback response produced by an AI model
 b)	Format:
 (1)	Rating (Integer): score from 1 to 5 (from poor/not relevant to excellent/very relevant)
 (2)	Reasoning:
-	Correctness – Is the feedback accurate and helpful?
-	Clarity – Is it easy to understand?
-	Tone – Is it supportive and constructive?
-	Actionability – Does it suggest a clear next step?
+o	Correctness – Is the feedback accurate and helpful?
+o	Clarity – Is it easy to understand?
+o	Tone – Is it supportive and constructive?
+o	Actionability – Does it suggest a clear next step?
 (3) AI Feedback Generation
 
 - Example:
@@ -90,17 +90,17 @@ b)	Reasoning (Explanation): provide a brief reasoning (short sentence) such as c
 
 (1)	Design Initial Prompt: define role, evaluation criteria, output format (scalar or binary), and reasoning requirement.
 (2)	Prompt Testing: run prompts and check for
-	Adherence to format (number or label and reasoning?).
-	Reasoning specificity (reference the criteria?).
-	Consistency across outputs (similar-level feedback gets similar scores).
+o	Adherence to format (number or label and reasoning?).
+o	Reasoning specificity (reference the criteria?).
+o	Consistency across outputs (similar-level feedback gets similar scores).
 (3)	Reliability Check: check score, iterate, and rating.
 (4)	Refinement Techniques:
-	Test with zero-shot prompting: work well for generalized queries, fast response generation.
-	Test with few-shot prompting: helps AI understand user intent better, improves contextual accuracy.
-	Test with multiple response sampling: enhances reliability by selecting the most consistent answer.
-	Direct Instruction Prompting: give clear and precise responses, reduces ambiguity 
+o	Test with zero-shot prompting: work well for generalized queries, fast response generation.
+o	Test with few-shot prompting: helps AI understand user intent better, improves contextual accuracy.
+o	Test with multiple response sampling: enhances reliability by selecting the most consistent answer.
+o	Direct Instruction Prompting: give clear and precise responses, reduces ambiguity 
 (5)	Validation check:
-	Compare AI-generated ratings using correlation (such as Pearson/Spearman) and agreement (such as Cohen's kappa) metrics.
-	If correlation high (more than 0.7), finalize prompt. Otherwise, refine further.
+o	Compare AI-generated ratings using correlation (such as Pearson/Spearman) and agreement (such as Cohen's kappa) metrics.
+o	If correlation high (more than 0.7), finalize prompt. Otherwise, refine further.
 
 - Recourse: Rao S. M & Prasuna VG (2025), “Chain of Draft Prompting: Structured Approach to Efficient AI Reasoning”. https://www.ijfmr.com/papers/2025/3/46661.pdf?utm_source=chatgpt.com
